@@ -35,8 +35,8 @@ dependencies = [
 dev = ["pytest>=8.0"]
 
 [project.urls]
-"Homepage" = "https://github.com/gabrielferrer/mckg-build"
-"Bug Tracker" = "https://github.com/gabrielferrer/mckg-build/issues"
+"Homepage" = "https://github.com/Goldferret/mckg-build"
+"Bug Tracker" = "https://github.com/Goldferret/mckg-build/issues"
 
 [project.scripts]
 mckg = "mkgraph.cli:main"
