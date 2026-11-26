@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mckg-build"
+version = "0.1.0"
+description = "Build a SurrealDB knowledge graph from a Minecraft modpack"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+keywords = ["minecraft", "modpack", "knowledge-graph", "surrealdb", "llm", "agents"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Games/Entertainment",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "httpx>=0.27",
+    "surrealdb[embedded]>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+"Homepage" = "https://github.com/gabrielferrer/mckg-build"
+"Bug Tracker" = "https://github.com/gabrielferrer/mckg-build/issues"
+
+[project.scripts]
+mckg = "mkgraph.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mkgraph"]
+
+[tool.hatch.build]
+sources = ["src"]

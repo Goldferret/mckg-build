@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Output artifacts — knowledge graphs are generated, not committed
+*.surql
+*.db/
+*.db
+
+# Local cache (vanilla data, VTP JARs downloaded at build time)
+.mkgraph_cache/
